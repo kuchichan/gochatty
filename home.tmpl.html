@@ -4,11 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Witam</title>
+  <link href="/static/css/main.css" rel="stylesheet"/>
 </head>
 <body>
-  <main>
-    <h1>Hello!</h1>
-  </main>
+  <div class="container">
+    <h1>Gochatty!</h1>
+
+    <form id="formJoin">
+      <label for="userInput">Please enter your name:</label>
+      <input type="text" id="userInput" name="userInput" placeholder="Your name..." required>
+      <button type="submit" id="submitBtn">Connect & Join</button>
+    </form>
+  </div>
+
+  <div id="status" class="status" style="display: none;"></div>
   <script src="/static/js/main.js"></script>
 </body>
 </html>

@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             ws.send(JSON.stringify(joinMsg));
         }
+        ws.onclose = (event) => {
+            console.log("Websocket connection closed");
+            updateStatus("Connection Closed!", "disonnected")
+            submitBtn.disabled = false;
+            ws = null;
+        }
     }
 
     form.addEventListener("submit", function(ev) {
